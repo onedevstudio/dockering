@@ -4,6 +4,7 @@ MAINTAINER Fernando Moreira <nandomoreira.me@gmail.com>
 
 RUN apt-get update
 RUN apt-get install -y \
+      vim \
       mysql-client \
       libmysqlclient-dev
 
