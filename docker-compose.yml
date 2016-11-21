@@ -1,0 +1,44 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    container_name: web
+    volumes:
+      - "./src:/var/www/html"
+    links:
+      - mysqldb:mysqldb
+    environment:
+      PHP_SITE_NAME: dev
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
+      PHP_XDEBUG_ENABLED: 0 # Set 1 to enable.
+  mysqldb:
+    image: wodby/wordpress-mariadb
+    container_name: mysqldb
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - ./docker-runtime/mariadb:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysqldb
+      PMA_USER: wordpress
+      PMA_PASSWORD: wordpress
+      PHP_UPLOAD_MAX_FILESIZE: 1G
+      PHP_MAX_INPUT_VARS: 1G
+    restart: always
+    ports:
+     - 8001:80
+    volumes:
+     - /sessions
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8002:8025"

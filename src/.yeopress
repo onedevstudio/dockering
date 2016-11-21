@@ -1,0 +1,15 @@
+{
+	"wpVer": "4.6.1",
+	"url": "http://wordpress.dev",
+	"tablePrefix": "dockerwp_",
+	"dbHost": "mysqldb",
+	"dbName": "wordpress",
+	"dbUser": "wordpress",
+	"dbPass": "wordpress",
+	"git": false,
+	"customDirs": true,
+	"wpDir": "dashboard",
+	"contentDir": "application",
+	"installTheme": false,
+	"saltKeys": "define('AUTH_KEY',         '@&{ymyT;ke5:xF-|bXKqQ`]jeS3l{?(Jbf18kmt9jo[YB3CWsJuuXB L,2X%AybY');\ndefine('SECURE_AUTH_KEY',  'KRj[@8Xsur7-tKG),{6D5t[=7SjylLf7g[~GNQPMM`j9?2Q<RWHr 0PA .]MIYe5');\ndefine('LOGGED_IN_KEY',    '(cj=AbcdGh0isX_BDHTO8/~js-Sl>Qr2L[,6G?AYTH,L,n1+<=/;*N)+!JeR}UeQ');\ndefine('NONCE_KEY',        'CoWdH?C;x4{q;5&6=,?gan<;+HwH)0pY/~wL{`#bUl@+[2Q+hJ^[rDDFsIBn,xzE');\ndefine('AUTH_SALT',        'nH/^TaJ%y*;5L8~t)K735c|B7!_Q~)S+aHUUX[~HNOXYl@GQgEk-0@eCrF<`(<?-');\ndefine('SECURE_AUTH_SALT', 'uX,qbxk6d:4` EFrbqe8PP{GBjUT0BKl^i|AdF7,?D$K5t9 Uef35]84pt&2o<IO');\ndefine('LOGGED_IN_SALT',   '^ocpue&>oJ-fT7l=EBI G3Cq+[KE~s!xQ`SP2^6eW|GVmJdLaK#eMid2#Gh|2?zG');\ndefine('NONCE_SALT',       'R[O[5K+8(q,/PJH8#S^32eKnOiQk5pDFT0}~1f|ZU.RWk#B.VsM-@/,AziPqk=gH');\n"
+}
