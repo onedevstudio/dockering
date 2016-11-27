@@ -5,28 +5,30 @@ services:
     build: .
     ports:
       - "80:80"
-    container_name: web
+    container_name: docker_web
     volumes:
-      - "./src:/var/www/html"
+      - "./src/themes:/var/www/html/wp-content/themes"
+      # - "./src/plugins:/var/www/html/wp-content/plugins"
     links:
       - mysqldb:mysqldb
     environment:
       PHP_SITE_NAME: dev
-      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
-      PHP_XDEBUG_ENABLED: 0 # Set 1 to enable.
+      PHP_XDEBUG_ENABLED: 1 # Set 1 to enable or 0 to desable.
+
   mysqldb:
     image: wodby/wordpress-mariadb
-    container_name: mysqldb
+    container_name: docker_mysqldb
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     volumes:
-      - ./docker-runtime/mariadb:/var/lib/mysql
+      - ./.runtime/mariadb:/var/lib/mysql
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
+    container_name: docker_phpmyadmin
     environment:
       PMA_HOST: mysqldb
       PMA_USER: wordpress
@@ -38,7 +40,3 @@ services:
      - 8001:80
     volumes:
      - /sessions
-  mailhog:
-    image: mailhog/mailhog
-    ports:
-      - "8002:8025"

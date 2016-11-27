@@ -1,0 +1,14 @@
+/**
+ * Theme Name: Docker WordPress
+ * Theme URI: https://github.com/nandomoreirame/docker-wordpress
+ * Author: Fernando Moreira
+ * Author URI: https://nandomoreira.me
+ * Description:
+ * Version: 1.0
+ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f1f1;
+  color: #424242;
+}
