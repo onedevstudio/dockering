@@ -2,6 +2,8 @@
 
 > Docker for WordPress using docker-compose
 
+![Docker](http://blog.rivendel.com.br/wp-content/uploads/2015/01/docker-image.png)
+
 ## Install
 
 Using `curl`
