@@ -1,5 +1,7 @@
 # Docker WordPress
 
+> Docker for WordPress using docker-compose
+
 ## Install
 
 Using `curl`
