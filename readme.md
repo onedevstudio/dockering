@@ -9,7 +9,7 @@ Using `curl`
 ```
 $ mkdir my-wp-project
 $ cd my-wp-project/
-$ sh -c "`curl -fsSL https://raw.github.com/nandomoreirame/docker-wordpress/blob/master/install.sh`"
+$ sh -c "`curl -fsSL https://raw.githubusercontent.com/nandomoreirame/docker-wordpress/master/install.sh`"
 ```
 
 Using `wget`
@@ -17,7 +17,7 @@ Using `wget`
 ```
 $ mkdir my-wp-project
 $ cd my-wp-project/
-$ sh -c "`wget -O - --no-check-certificate https://raw.github.com/nandomoreirame/docker-wordpress/blob/master/install.sh`"
+$ sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nandomoreirame/docker-wordpress/master/install.sh`"
 ```
 
 Enjoy! :smiley:
