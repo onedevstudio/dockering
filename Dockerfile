@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:7.0-apache
 
 MAINTAINER Fernando Moreira <nandomoreira.me@gmail.com>
 
