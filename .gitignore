@@ -1,1 +1,3 @@
 .runtime
+src/plugins/**/*
+!src/plugins/index.php

@@ -8,7 +8,7 @@ services:
     container_name: docker_web
     volumes:
       - "./src/themes:/var/www/html/wp-content/themes"
-      # - "./src/plugins:/var/www/html/wp-content/plugins"
+      - "./src/plugins:/var/www/html/wp-content/plugins"
     links:
       - mysqldb:mysqldb
     environment:

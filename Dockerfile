@@ -14,7 +14,7 @@ RUN a2enmod rewrite
 
 RUN docker-php-ext-install mysqli
 
-ADD src/docker.conf /etc/apache2/sites-enabled/
+ADD src/configs/docker.conf /etc/apache2/sites-enabled/
 
 USER root
 WORKDIR /var/www/
@@ -26,8 +26,8 @@ RUN mv -f wordpress html
 
 WORKDIR /var/www/html
 
-ADD src/.htaccess ./
-ADD src/wp-config.* ./
+ADD src/configs/.htaccess ./
+ADD src/configs/wp-config.* ./
 
 RUN chown -R www-data: /var/www/html
 
