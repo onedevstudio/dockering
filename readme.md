@@ -29,12 +29,12 @@ cd src/
 npm install
 ```
 
-## TODO gulp tasks
+### TODO gulp tasks
 
- - [x] stylesheets
- - [ ] javascripts
- - [ ] javascript lint
- - [ ] images compress
+- [x] stylesheets
+- [ ] javascripts
+- [ ] javascript lint
+- [ ] images compress
 
 Enjoy! :smiley:
 
