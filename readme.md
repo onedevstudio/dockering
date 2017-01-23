@@ -1,6 +1,6 @@
 # Docker WordPress
 
-> Docker for WordPress using docker-compose
+> Docker for WordPress using GulpJS and docker-compose
 
 ![Docker](http://blog.rivendel.com.br/wp-content/uploads/2015/01/docker-image.png)
 
@@ -21,6 +21,20 @@ mkdir my-wp-project
 cd my-wp-project/
 sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nandomoreirame/docker-wordpress/master/install.sh`"
 ```
+
+## Install GulpJS
+
+```
+cd src/
+npm install
+```
+
+## TODO gulp tasks
+
+ - [x] stylesheets
+ - [ ] javascripts
+ - [ ] javascript lint
+ - [ ] images compress
 
 Enjoy! :smiley:
 
