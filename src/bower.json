@@ -1,0 +1,17 @@
+{
+  "name": "docker-wordpress",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Fernando Moreira <nandomoreira.me@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nandomoreirame/docker-wordpress",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
