@@ -49,3 +49,4 @@ jspm_packages
 .runtime
 src/plugins/**/*
 !src/plugins/index.php
+src/themes/docker-wp/assets
