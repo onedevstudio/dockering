@@ -1,7 +1,7 @@
 'use strict';
 
-import Config  from './gulpfile.config';
-import Gulp    from 'gulp';
+import Config from './gulpfile.config';
+import Gulp from 'gulp';
 import Plugins from 'gulp-load-plugins';
 import Bourbon from 'node-bourbon';
 
