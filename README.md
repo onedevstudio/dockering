@@ -11,7 +11,7 @@ Using `curl`
 ```
 mkdir my-wp-project
 cd my-wp-project/
-sh -c "`curl -fsSL https://raw.githubusercontent.com/nandomoreirame/docker-wordpress/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/nandomoreirame/wp-docker/master/install.sh`"
 ```
 
 Using `wget`
@@ -19,13 +19,13 @@ Using `wget`
 ```
 mkdir my-wp-project
 cd my-wp-project/
-sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nandomoreirame/docker-wordpress/master/install.sh`"
+sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nandomoreirame/wp-docker/master/install.sh`"
 ```
 
 or
 
-1. Clone this repo: `git clone https://github.com/nandomoreirame/docker-wordpress.git`
-2. Go to folder: `cd docker-wordpress/`
+1. Clone this repo: `git clone https://github.com/nandomoreirame/wp-docker.git`
+2. Go to folder: `cd wp-docker/`
 3. Remove origin: `git remote rm origin`
 4. Add your repo origin: `git remote add origin https://github.com/YOUR/REPOSITORY.git`
 5. Build docker using [docker-compose](https://docs.docker.com/compose/): `docker-compose up -d --build`
@@ -41,15 +41,17 @@ or
 yarn
 ```
 
-### TODO
+### gulp tasks
 
-**implements more gulp tasks**
-
-- [x] stylesheets
-- [ ] javascripts
-- [ ] javascript lint
-- [ ] javascript tests
-- [ ] images compress
+- [x] gulp clean
+- [x] gulp stylesheets
+- [x] gulp scripts
+- [x] gulp scripts:vendor
+- [x] gulp images
+- [x] gulp fonts
+- [x] gulp build
+- [x] gulp watch
+- [x] gulp default
 
 Enjoy! :smiley:
 

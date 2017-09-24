@@ -1,0 +1,3 @@
+[submodule "src/themes/wp-docker-theme"]
+	path = src/themes/wp-docker-theme
+	url = git@github.com:nandomoreirame/wp-docker-theme.git

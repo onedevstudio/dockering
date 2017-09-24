@@ -1,0 +1,24 @@
+{
+  "name": "wp-docker-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "prod": "NODE_ENV=production npm run build",
+    "test": "echo \"no has test lol\""
+  },
+  "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoamazing": "^0.0.4",
+    "gulp-util": "^3.0.8",
+    "node-bourbon": "^4.2.8",
+    "run-sequence": "^2.1.0"
+  },
+  "dependencies": {
+    "bulma": "^0.5.1",
+    "jquery": "^3.2.1"
+  }
+}

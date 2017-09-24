@@ -1,0 +1,16 @@
+{
+	"folders": [
+    {
+      "path": "./"
+    },
+    {
+			"path": "src/assets"
+		},
+		{
+			"path": "src/themes/wp-docker-theme"
+		},
+		{
+			"path": "src/plugins"
+		}
+	]
+}

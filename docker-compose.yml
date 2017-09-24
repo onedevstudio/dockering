@@ -9,6 +9,7 @@ services:
     volumes:
       - "./src/themes:/var/www/html/wp-content/themes"
       - "./src/plugins:/var/www/html/wp-content/plugins"
+      - "./src/uploads:/var/www/html/wp-content/uploads"
     links:
       - mysqldb:mysqldb
     environment:
