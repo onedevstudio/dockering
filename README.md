@@ -11,7 +11,7 @@ Using `curl`
 ```
 mkdir my-wp-project
 cd my-wp-project/
-sh -c "`curl -fsSL https://raw.githubusercontent.com/nandomoreirame/wp-docker/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/onedevstudio/wp-docker/master/install.sh`"
 ```
 
 Using `wget`
@@ -19,12 +19,12 @@ Using `wget`
 ```
 mkdir my-wp-project
 cd my-wp-project/
-sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nandomoreirame/wp-docker/master/install.sh`"
+sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/onedevstudio/wp-docker/master/install.sh`"
 ```
 
 or
 
-1. Clone this repo: `git clone https://github.com/nandomoreirame/wp-docker.git`
+1. Clone this repo: `git clone https://github.com/onedevstudio/wp-docker.git`
 2. Go to folder: `cd wp-docker/`
 3. Remove origin: `git remote rm origin`
 4. Add your repo origin: `git remote add origin https://github.com/YOUR/REPOSITORY.git`
