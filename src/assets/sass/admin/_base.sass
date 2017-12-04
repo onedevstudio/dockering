@@ -1,0 +1,41 @@
+@import url("//fonts.googleapis.com/css?family=Suez+One|Ubuntu:300,400,500")
+
+html, body.iframe
+  background: none
+  width: 100%
+  height: 100%
+
+body
+  background-color: darken($theme-white, 3%)
+  font-weight: 400
+
+html,
+body,
+input,
+select,
+textarea,
+  font-family: $theme-font-family
+
+h1, h2, h3, h4, h5, h6
+  font-family: $theme-font-family-heading
+  color: #111 !important
+  font-weight: 300
+
+.wrap >
+  h2 + p, h1 + p
+    clear: both
+
+.edit-php
+  h1 + div.updated, h2 + div.updated
+    clear: both
+
+.below-h2
+  clear: both
+
+.wrap
+  p, a, ul li
+    font-weight: normal
+    font-style: normal
+
+.tagsdiv .newtag
+  width: 160px

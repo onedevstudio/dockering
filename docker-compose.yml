@@ -5,7 +5,7 @@ services:
     build: .
     ports:
       - "80:80"
-    container_name: docker_web
+    container_name: basetheme_web
     volumes:
       - "./src/themes:/var/www/html/wp-content/themes"
       - "./src/plugins:/var/www/html/wp-content/plugins"
@@ -18,7 +18,7 @@ services:
 
   mysqldb:
     image: wodby/wordpress-mariadb
-    container_name: docker_mysqldb
+    container_name: basetheme_mysqldb
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_DATABASE: wordpress
@@ -29,7 +29,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: docker_phpmyadmin
+    container_name: basetheme_phpmyadmin
     environment:
       PMA_HOST: mysqldb
       PMA_USER: wordpress

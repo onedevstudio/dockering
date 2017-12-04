@@ -1,0 +1,22 @@
+.postbox
+  border: none
+  box-shadow: $box-shadow-base
+  background: $theme-white
+  transition: box-shadow .2s $timing-function, transform .2s $timing-function
+  &:hover
+    transform: translate3d(0, 5px, 0)
+    box-shadow: $box-shadow-hover
+
+.metabox-holder .stuffbox > h3,
+.metabox-holder .postbox > h3,
+.metabox-holder h3.hndle,
+.metabox-holder h2.hndle
+  font-size: 18px
+
+.metabox-holder .postbox-container .empty-container
+  border-color: rgba(#000, .1)
+  height: 290px
+
+#postdivrich,
+.theme-overlay .theme-backdrop
+  @extend .postbox

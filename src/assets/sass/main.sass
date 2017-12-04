@@ -1,3 +1,44 @@
-@import "bourbon"
+//
+// Theme Style
+//
 
-// @import "bulma/bulma"
+// --------------------------------------------------------------
+// Tools, Variables and Mixins
+// --------------------------------------------------------------
+// @import "bourbon";
+@import "settings/variables"
+@import "settings/mixins"
+
+// --------------------------------------------------------------
+// Reset and Dependencies
+// --------------------------------------------------------------
+@import "_bootstrap.sass"
+// @import "animate.css/animate.min"
+
+// --------------------------------------------------------------
+// CSS and Components
+// --------------------------------------------------------------
+@import "shared/base"
+@import "shared/wordpress"
+@import "shared/forms"
+@import "shared/pagination"
+@import "shared/shortcodes"
+
+// --------------------------------------------------------------
+// Layout
+// --------------------------------------------------------------
+@import "shared/navigation-skiplink"
+@import "shared/header-branding"
+@import "shared/header-image"
+@import "shared/navigation-top"
+@import "shared/wrapper"
+@import "shared/content"
+@import "shared/sidebar"
+@import "shared/footer"
+@import "shared/animation"
+
+// --------------------------------------------------------------
+// Helpers
+// --------------------------------------------------------------
+@import "shared/queries"
+@import "shared/helpers"

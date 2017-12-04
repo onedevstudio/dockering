@@ -15,19 +15,20 @@ const {
 
 task.clean(gulp, {
   src: [
-    `./src/themes/${themeName}/assets/*`
+    `./src/themes/${themeName}/assets/javascripts`,
+    `./src/themes/${themeName}/assets/stylesheets`
   ]
 })
 
 task.stylesheets(gulp, {
-  src: `${srcPath}/sass/*.sass`,
+  src: `${srcPath}/sass/*.{sass,scss}`,
   dest: `${themePath}/assets/stylesheets`,
   sassSettings: sassSettings,
   env: env
 })
 
 task.scripts(gulp, {
-  src: `${srcPath}/javascripts/main.js`,
+  src: `${srcPath}/javascripts/*.js`,
   dest: `${themePath}/assets/javascripts`,
   includeSettings: includeSettings,
   include: true,
@@ -53,7 +54,10 @@ task.images(gulp, {
 
 task.copy(gulp, {
   taskname: 'fonts',
-  src: `${srcPath}/fonts/**/*`,
+  src: [
+    `${srcPath}/fonts/**/*`,
+    `${modulesPath}/bootstrap-sass/assets/fonts/**/*`,
+  ],
   dest: `${themePath}/assets/fonts`
 })
 
@@ -68,7 +72,7 @@ gulp.task('build', callback =>
 )
 
 gulp.task('watch', ['build'], () => {
-  gulp.watch(`${srcPath}/sass/**/*.sass`, ['stylesheets']);
+  gulp.watch(`${srcPath}/sass/**/*.{sass,scss}`, ['stylesheets']);
   gulp.watch(`${srcPath}/javascripts/**/*.js`, ['scripts']);
 });
 

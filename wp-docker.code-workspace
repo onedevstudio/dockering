@@ -1,16 +1,24 @@
 {
-	"folders": [
+  "folders": [
     {
-      "path": "./"
+      "path": "./src/themes/base-theme/"
     },
     {
-			"path": "src/assets"
-		},
-		{
-			"path": "src/themes/wp-docker-theme"
-		},
-		{
-			"path": "src/plugins"
-		}
-	]
+      "path": "./src/assets"
+    },
+    {
+      "path": "./src/plugins"
+    },
+    {
+      "path": "./"
+    }
+  ],
+  "settings": {
+    "search.exclude": {
+      "./src/themes/base-theme/assets/**/*": true
+    },
+    "files.exclude": {
+      "**/src": true
+    }
+  }
 }

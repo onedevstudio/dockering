@@ -1,0 +1,22 @@
+.row-actions
+  left: 0
+  span
+    > a
+      @extend .label
+      @extend .label-default
+      &, &:hover, &:focus
+        color: #fff
+    &.edit > a
+      @extend .label-primary
+    &.inline > a
+      @extend .label-success
+    &.span > a,
+    &.trash > a
+      @extend .label-danger
+      &, &:hover, &:focus
+        color: #fff
+
+#the-comment-list .unapprove a
+  @extend .label-danger
+  &, &:hover, &:focus
+    color: #fff
