@@ -2,9 +2,8 @@
   border: none
   box-shadow: $box-shadow-base
   background: $theme-white
-  transition: box-shadow .2s $timing-function, transform .2s $timing-function
+  transition: box-shadow .2s $timing-function
   &:hover
-    transform: translate3d(0, 5px, 0)
     box-shadow: $box-shadow-hover
 
 .metabox-holder .stuffbox > h3,
@@ -20,3 +19,18 @@
 #postdivrich,
 .theme-overlay .theme-backdrop
   @extend .postbox
+
+.wrap > h2:first-child,
+.wrap [class$="icon32"] + h2,
+.postbox .inside h2,
+.wrap h1
+  font-size: 2rem
+  margin: 20px 25px 40px 0 !important
+  color: #3d4a5d !important
+  &:after
+    content: ''
+    width: 40px
+    height: 4px
+    background: #3d4a5d
+    display: block
+    margin-top: 5px

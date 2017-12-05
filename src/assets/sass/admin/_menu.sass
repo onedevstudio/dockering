@@ -1,14 +1,106 @@
 $sidebar-width: 200px
+$sidebar-bg: #edf0f1
+$sidebar-bg-hover: darken($sidebar-bg, 5%)
+$sidebar-bg-active: lighten($sidebar-bg, 5%)
+$sidebar-border: 1px solid rgba(#d8dddf, .5)
 
 #adminmenuback,
 #adminmenuwrap,
 #adminmenu,
 #adminmenu .wp-submenu
   width: $sidebar-width
-  background-color: #23282d
 
-#adminmenu .wp-submenu
-  left: $sidebar-width
+#adminmenuwrap,
+#adminmenuback,
+#adminmenu
+  background-color: $sidebar-bg
+
+#adminmenu,
+#adminmenuback
+  border-right: $sidebar-border
+
+#adminmenu
+  margin: 0
+  ul, li
+    text-align: left
+
+  a.menu-top,
+  .wp-submenu-head
+    padding: 15px 0
+
+  li
+    &.menu-top
+      border-bottom: $sidebar-border
+    &.wp-menu-separator
+      background: darken($sidebar-bg-active, 5%)
+
+  // div.wp-menu-name
+    // padding: 5px 0
+    // text-align: left
+
+  div.wp-menu-image
+    // float: none
+    // width: 100%
+    // height: 26px
+    &:before
+      font-size: 16px
+      padding: 8px 0
+
+  .wp-submenu
+    left: $sidebar-width
+    background-color: #fff
+
+  .wp-submenu .wp-submenu-head,
+  a.wp-has-current-submenu:focus + .wp-submenu
+    background-color: $sidebar-bg-hover
+    color: #2c333e
+
+  .wp-submenu .wp-submenu-head
+    font-weight: 700
+
+  li.wp-has-submenu.wp-not-current-submenu.opensub:hover:after
+    border-right-color: #fff
+
+  li.menu-top:hover,
+  li.opensub > a.menu-top,
+  li > a.menu-top:focus
+    background-color: $sidebar-bg-hover
+
+  li.menu-top:hover,
+  li.opensub > a.menu-top,
+  li > a.menu-top:focus,
+  li.wp-has-current-submenu a.wp-has-current-submenu
+    &, div.wp-menu-image:before
+      color: #2c333e
+
+  .wp-has-current-submenu li.current,
+  .wp-has-current-submenu .wp-submenu,
+  .wp-submenu li
+    a
+      color: lighten(#2c333e, 10%)
+      &:hover,
+      &:focus
+        color: #00b9eb
+
+  li > a,
+  li > a:focus,
+  .wp-submenu li.current,
+  li div.wp-menu-image:before,
+  a.wp-has-current-submenu:focus + .wp-submenu li.current a,
+  .wp-submenu li.current a:hover,
+  .wp-submenu li.current a:focus
+    color: #2c333e
+
+  li.wp-has-current-submenu a.wp-has-current-submenu,
+  .wp-has-current-submenu .wp-submenu.sub-open,
+  .wp-has-current-submenu.opensub .wp-submenu,
+  .wp-has-current-submenu .wp-submenu
+    background-color: $sidebar-bg-active
+
+  .wp-has-current-submenu .wp-submenu
+    border-top: 1px solid darken($sidebar-bg-active, 15%)
+    border-bottom: 1px solid darken($sidebar-bg-active, 15%)
+    background-color: darken($sidebar-bg-active, 6%)
 
 #wpcontent,
 #wpfooter
@@ -18,3 +110,13 @@ input[type="radio"],
 input[type="checkbox"]
   margin-top: -5px
   margin-right: 5px
+
+.sticky-menu #adminmenu
+  a.menu-top,
+  .wp-submenu-head
+    padding: 0
+
+#collapse-menu
+  // position: fixed
+  // bottom: 10px
+  display: none

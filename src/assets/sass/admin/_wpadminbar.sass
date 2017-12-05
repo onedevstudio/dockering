@@ -1,0 +1,64 @@
+$wpadminbar-bg: #3d4a5d
+$wpadminbar-height: 50px
+
+html.wp-toolbar
+  padding-top: $wpadminbar-height
+
+#wpadminbar
+  background: $wpadminbar-bg
+  height: $wpadminbar-height
+  &, *
+    line-height: $wpadminbar-height
+
+  .workshop-icon > .ab-item:before
+    content: ''
+    display: inline-block
+    background-image: url(../images/icon-white.png) !important
+    background-image: none, url(../images/icon-white.svg) !important
+    background-repeat: no-repeat
+    background-position: 50%
+    background-size: 25px 25px
+    width: 25px
+    height: 25px
+    padding: 12px 0
+
+  > #wp-toolbar > #wp-admin-bar-root-default .ab-icon,
+  .ab-icon,
+  .ab-item:before
+    padding: 12px 0
+
+  .ab-label,
+  .quicklinks a,
+  .quicklinks .ab-empty-item,
+  .shortlink-input
+    height: $wpadminbar-height
+
+#wp-admin-bar-my-account.with-avatar > .ab-empty-item img,
+#wp-admin-bar-my-account.with-avatar > a img,
+#wp-admin-bar-user-info .avatar
+  border-radius: 100%
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar > a img
+  margin: 10px 10px 0 0
+  float: left
+  display: inline-block
+  height: 26px
+
+#wpadminbar #wp-admin-bar-my-account.with-avatar #wp-admin-bar-user-actions > li,
+#wpadminbar #wp-admin-bar-user-info span
+  position: initial
+  margin: 0
+  line-height: 1.5
+  height: auto
+
+#wpadminbar #wp-admin-bar-user-actions.ab-submenu
+  padding: 15px 0 15px
+  position: relative
+  padding-left: 80px
+
+#wp-admin-bar-user-info .avatar
+  position: absolute
+  left: 15px
+  top: 15px
+  width: 64px
+  height: 64px
