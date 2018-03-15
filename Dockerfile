@@ -1,32 +1,19 @@
-FROM php:7.0-apache
+FROM wordpress:4.9
 
 RUN apt-get update && \
     apt-get install -y \
-      mysql-client \
-      libmysqlclient-dev \
+      git \
+      curl \
+      mailutils \
       wget \
       vim && \
     apt-get clean
 
-RUN a2enmod rewrite
+RUN curl -Lsf 'https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz' | tar -C '/usr/local' -xvzf -
+ENV PATH /usr/local/go/bin:$PATH
+RUN go get github.com/mailhog/mhsendmail
+RUN cp /root/go/bin/mhsendmail /usr/bin/mhsendmail
 
-RUN docker-php-ext-install mysqli
-
-ADD configs/docker.conf /etc/apache2/sites-enabled/
-
-USER root
-WORKDIR /var/www/
-
-RUN rm -rf ./html/
-RUN wget --quiet https://wordpress.org/latest.tar.gz
-RUN tar -xzf latest.tar.gz
-RUN mv -f wordpress html
-
+ADD . /var/www/html
 WORKDIR /var/www/html
-
-ADD configs/.htaccess ./
-ADD configs/wp-config.* ./
-
-RUN chown -R www-data: /var/www/html
-
 EXPOSE 80

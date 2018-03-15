@@ -1,24 +1,18 @@
 {
   "folders": [
     {
-      "path": "./src/themes/base-theme/"
+      "path": "./assets"
     },
     {
-      "path": "./src/assets"
-    },
-    {
-      "path": "./src/plugins"
-    },
-    {
-      "path": "./"
+      "path": "./wp/wp-content"
     }
   ],
   "settings": {
     "search.exclude": {
-      "./src/themes/base-theme/assets/**/*": true
+      "./wp/wp-content/themes/**/assets/**/*": true
     },
     "files.exclude": {
-      "**/src": true
+      "**/wp": true
     }
   }
 }

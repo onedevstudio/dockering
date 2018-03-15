@@ -1,27 +1,24 @@
 {
-  "name": "base-theme",
-  "version": "1.0.0",
-  "description": "",
+  "name": "dockering",
+  "version": "2.0.0",
+  "description": "🐘 Dockering the WordPress application using docker-compose",
   "main": "index.js",
-  "scripts": {
-    "dev": "gulp watch",
-    "build": "gulp build",
-    "prod": "NODE_ENV=production npm run build",
-    "test": "echo \"no has test lol\""
-  },
-  "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
+  "author": "Fernando Moreira",
   "license": "MIT",
-  "devDependencies": {
-    "autoamazing": "^0.0.4",
-    "gulp-util": "^3.0.8",
-    "node-bourbon": "^4.2.8",
-    "run-sequence": "^2.1.0"
+  "bugs": {
+    "url": "https://github.com/onedevstudio/dockering/issues"
   },
-  "dependencies": {
-    "FitVids": "https://github.com/davatron5000/FitVids.js.git",
-    "bootstrap-sass": "^3.3.7",
-    "bulma": "^0.5.1",
-    "jquery": "^3.2.1",
-    "moment": "^2.19.3"
-  }
+  "homepage": "https://github.com/onedevstudio/dockering#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onedevstudio/dockering.git"
+  },
+  "keywords": [
+    "docker",
+    "wordpress",
+    "gulp"
+  ]
 }

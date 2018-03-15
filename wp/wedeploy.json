@@ -1,0 +1,10 @@
+{
+  "id": "wp",
+  "env": {
+    "WORDPRESS_DB_HOST": "db",
+    "WORDPRESS_DB_USER": "root",
+    "WORDPRESS_DB_PASSWORD": "wordpress",
+    "WORDPRESS_DB_NAME": "wordpress"
+  },
+  "dependencies": ["db"]
+}

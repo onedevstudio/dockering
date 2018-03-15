@@ -1,37 +1,45 @@
-version: "2"
+version: "3"
 
 services:
-  web:
+  wp:
     build: .
     ports:
       - "80:80"
-    container_name: basetheme_web
+    container_name: wp
+    restart: always
     volumes:
-      - "./src/themes:/var/www/html/wp-content/themes"
-      - "./src/plugins:/var/www/html/wp-content/plugins"
-      - "./src/uploads:/var/www/html/wp-content/uploads"
+      - "./wp/wp-content:/var/www/html/wp-content"
+      - "./configs/wp-config.php:/var/www/html/wp-config.php"
+      - "./configs/wp-config.dev.php:/var/www/html/wp-config.dev.php"
+      - "./configs/htaccess:/var/www/html/.htaccess"
+      - "./configs/phpinfo.php:/var/www/html/phpinfo.php"
+      - "./configs/php.ini-development:/usr/local/etc/php/php.ini"
+      - "./logs/apache:/var/log/apache2"
     links:
-      - mysqldb:mysqldb
+      - db:db
+      - mail:mail
     environment:
       PHP_SITE_NAME: dev
       PHP_XDEBUG_ENABLED: 1 # Set 1 to enable or 0 to desable.
 
-  mysqldb:
-    image: wodby/wordpress-mariadb
-    container_name: basetheme_mysqldb
+  db:
+    image: mysql
+    container_name: db
+    restart: always
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
     volumes:
-      - ./.runtime/mariadb:/var/lib/mysql
+      - ./dbdump.sql:/dbdump.sql
+      - ./.runtime/mysql:/var/lib/mysql
 
-  phpmyadmin:
+  dbadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: basetheme_phpmyadmin
+    container_name: dbadmin
     environment:
-      PMA_HOST: mysqldb
+      PMA_HOST: db
       PMA_USER: wordpress
       PMA_PASSWORD: wordpress
       PHP_UPLOAD_MAX_FILESIZE: 1G
@@ -41,3 +49,11 @@ services:
      - 8001:80
     volumes:
      - /sessions
+
+  mail:
+    image: mailhog/mailhog
+    container_name: mail
+    restart: always
+    ports:
+      - "1025:1025"
+      - "8025:8025"

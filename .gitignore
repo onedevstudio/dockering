@@ -47,6 +47,13 @@ jspm_packages
 .yarn-integrity
 
 .runtime
-src/plugins/**/*
-!src/plugins/index.php
-src/themes/docker-wp/assets
+logs
+wp/wp-content/themes/docker-wp/assets
+
+wp/wp-content/plugins/**/*
+!wp/wp-content/plugins/index.php
+
+wp/wp-content/uploads/**/*
+!wp/wp-content/uploads/index.php
+
+wp/wp-content/themes/twenty*
