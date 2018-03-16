@@ -9,7 +9,7 @@ WP_EMAIL="admin@localhost"
 docker-compose up -d --build
 
 docker-compose exec wp wp core install \
-  --url="$BASE_URL" \
+  --url="$WP_URL" \
   --title="$WP_TITLE" \
   --admin_user="$WP_USER" \
   --admin_password="$WP_PASS" \
