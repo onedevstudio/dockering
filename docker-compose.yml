@@ -1,47 +1,44 @@
 version: "3"
 
 services:
-  wp:
+  app:
     build: .
     ports:
       - "80:80"
-    container_name: wp
+    container_name: app
     restart: always
     volumes:
       - "./wp/wp-content:/var/www/html/wp-content"
-      - "./configs/wp-config.php:/var/www/html/wp-config.php"
-      - "./configs/wp-config.dev.php:/var/www/html/wp-config.dev.php"
-      - "./configs/htaccess:/var/www/html/.htaccess"
+      - "./wp/.htaccess:/var/www/html/.htaccess"
       - "./configs/phpinfo.php:/var/www/html/phpinfo.php"
+      - "./configs/wp-config.dev.php:/var/www/html/wp-config.dev.php"
       - "./configs/php.ini-development:/usr/local/etc/php/php.ini"
       - "./logs/apache:/var/log/apache2"
     links:
-      - db:db
+      - dbhost:dbhost
       - mail:mail
     environment:
       PHP_SITE_NAME: dev
       PHP_XDEBUG_ENABLED: 1 # Set 1 to enable or 0 to desable.
 
-  db:
+  dbhost:
     image: mysql
-    container_name: db
-    restart: always
+    container_name: dbhost
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 1
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: dbbase
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: dbpass
     volumes:
-      - ./dbdump.sql:/dbdump.sql
       - ./.runtime/mysql:/var/lib/mysql
 
   dbadmin:
     image: phpmyadmin/phpmyadmin
     container_name: dbadmin
     environment:
-      PMA_HOST: db
-      PMA_USER: wordpress
-      PMA_PASSWORD: wordpress
+      PMA_HOST: dbhost
+      PMA_USER: dbuser
+      PMA_PASSWORD: dbpass
       PHP_UPLOAD_MAX_FILESIZE: 1G
       PHP_MAX_INPUT_VARS: 1G
     restart: always

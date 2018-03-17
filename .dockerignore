@@ -20,3 +20,5 @@ logs
 ./assets
 *.lock
 .DS_Store
+install.sh
+wp

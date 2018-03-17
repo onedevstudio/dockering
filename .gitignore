@@ -48,7 +48,9 @@ jspm_packages
 
 .runtime
 logs
-wp/wp-content/themes/docker-wp/assets
+wp/wp-content/themes/**/assets
+wp/wp-content/languages
+wp/wp-content/upgrade
 
 wp/wp-content/plugins/**/*
 !wp/wp-content/plugins/index.php
