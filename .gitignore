@@ -58,4 +58,5 @@ wp/wp-content/plugins/**/*
 wp/wp-content/uploads/**/*
 !wp/wp-content/uploads/index.php
 
+wp/wp-content/themes/odin
 wp/wp-content/themes/twenty*
