@@ -48,15 +48,3 @@ jspm_packages
 
 .runtime
 logs
-wp/wp-content/themes/**/assets
-wp/wp-content/languages
-wp/wp-content/upgrade
-
-wp/wp-content/plugins/**/*
-!wp/wp-content/plugins/index.php
-
-wp/wp-content/uploads/**/*
-!wp/wp-content/uploads/index.php
-
-wp/wp-content/themes/odin
-wp/wp-content/themes/twenty*

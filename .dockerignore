@@ -8,6 +8,7 @@
 node_modules
 wedeploy.json
 Dockerfile
+wp/Dockerfile
 docker-compose.yml
 gulpfile.js
 macuxi.code-workspace

@@ -8,12 +8,8 @@ services:
     container_name: app
     restart: always
     volumes:
-      - "./wp/wp-content:/var/www/html/wp-content"
-      - "./wp/.htaccess:/var/www/html/.htaccess"
-      - "./configs/phpinfo.php:/var/www/html/phpinfo.php"
-      - "./configs/wp-config.dev.php:/var/www/html/wp-config.dev.php"
-      - "./configs/php.ini-development:/usr/local/etc/php/php.ini"
-      - "./scripts/db:/var/www/html/db"
+      - "./wp:/var/www/html"
+      - "./php.ini-development:/usr/local/etc/php/php.ini"
       - "./logs/apache:/var/log/apache2"
     links:
       - dbhost:dbhost
