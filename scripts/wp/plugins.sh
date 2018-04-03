@@ -6,12 +6,5 @@ source ./scripts/config.sh
 for plugin in "${PLUGINS_INSTALL[@]}"
 do
   docker-compose exec app \
-    wp plugin install $plugin --allow-root
-done
-
-# Active WordPress dev plugins
-for plugin in "${PLUGINS_INSTALL[@]}"
-do
-  docker-compose exec app \
-    wp plugin activate $plugin --allow-root
+    wp plugin install $plugin --activate --allow-root
 done
