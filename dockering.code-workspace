@@ -45,7 +45,6 @@
       "**/wp-comments-post.php": true,
       "**/wp-config-sample.php": true,
       "**/wp-config.php": true,
-      "**/wp-content": true,
       "**/wp-cron.php": true,
       "**/wp-links-opml.php": true,
       "**/wp-load.php": true,

@@ -6,7 +6,6 @@ wp-blog-header.php
 wp-comments-post.php
 wp-config-sample.php
 wp-config.php
-wp-content
 wp-cron.php
 wp-includes
 wp-links-opml.php
@@ -19,7 +18,6 @@ wp-trackback.php
 xmlrpc.php
 license.txt
 readme.html
-index.php
 
 wp-content/themes/**/assets
 wp-content/languages
