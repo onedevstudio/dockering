@@ -8,7 +8,7 @@ services:
     container_name: app
     restart: always
     volumes:
-      - "./wp:/var/www/html"
+      - "./www:/var/www/html"
       - "./php.ini-development:/usr/local/etc/php/php.ini"
       - "./logs/apache:/var/log/apache2"
     links:

@@ -6,11 +6,11 @@
     },
     {
       "name": "Content",
-      "path": "./wp/wp-content"
+      "path": "./www/wp-content"
     },
     {
       "name": "WordPress",
-      "path": "./wp"
+      "path": "./www"
     },
     {
       "name": "Logs",
@@ -27,10 +27,10 @@
   ],
   "settings": {
     "search.exclude": {
-      "./wp/wp-content/themes/**/assets/**/*": true
+      "./www/wp-content/themes/**/assets/**/*": true
     },
     "files.exclude": {
-      "**/wp": true,
+      "**/www": true,
       "**/db": true,
       "**/dbadmin": true,
       "**/logs": true,
