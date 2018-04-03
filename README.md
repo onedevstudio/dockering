@@ -11,15 +11,14 @@
 3. `docker-compose up -d`
 4. `./scripts/install.sh`
 
-open [localhost/wp-admin](http://localhost/wp-admin) in your browser
+open [dockering.local/wp-admin](http://dockering.local/wp-admin) in your browser
 
 **Login configs**
 
-* **username**: `admin`
-* **email**: `admin@dockering.local`
+* **username**: `admin` or **email**: `admin@dockering.local`
 * **password**: `admin`
 
-## Configs
+## Config files
 
 **[.env](/.env) file for docker-compose.yml**
 
