@@ -6,12 +6,18 @@
 
 ## Installation
 
-1. `git clone https://github.com/onedevstudio/dockering.git your-project`
-2. `cd your-project/`
+1. `git clone https://github.com/onedevstudio/dockering.git your-project && cd your-project/`
+2. `sudo -- sh -c -e "echo '127.0.0.1 dockering.local' >> /etc/hosts";`
 3. `docker-compose up -d`
 4. `./scripts/install.sh`
-5. open [localhost/wp-admin](http://localhost/wp-admin) in your browser
-6. *username:* `admin`, *email*: `admin@dockering.local`, *password*: `admin`
+
+open [localhost/wp-admin](http://localhost/wp-admin) in your browser
+
+**Login configs**
+
+* **username**: `admin`
+* **email**: `admin@dockering.local`
+* **password**: `admin`
 
 ## Configs
 
