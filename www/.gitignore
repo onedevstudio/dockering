@@ -29,5 +29,5 @@ wp-content/plugins/**/*
 wp-content/uploads/**/*
 !wp-content/uploads/index.php
 
-wp-content/themes/odin
+wp-content/themes/onedev-theme
 wp-content/themes/twenty*

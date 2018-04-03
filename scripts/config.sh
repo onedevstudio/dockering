@@ -20,7 +20,7 @@ WP_USER_EMAIL="admin@localhost.com"
 DUMP_FILE="dbase/dbbase.sql"
 
 # Themes
-THEME_INSTALL="https://github.com/wpbrasil/odin/archive/2.3.0.zip" # theme slug, zip, url or path
+THEME_INSTALL="https://github.com/onedevstudio/onedev-theme/archive/master.zip"
 THEMES_DELETE=( "twentyfifteen" "twentysixteen" "twentyseventeen" )
 
 # Plugins
