@@ -21,7 +21,7 @@ open [localhost/wp-admin](http://localhost/wp-admin) in your browser
 
 ## Configs
 
-*[.env file](/.env)* for docker-compose.yml
+**[.env](/.env) file for docker-compose.yml**
 
 ```
 APP_NAME=dockering
@@ -35,7 +35,7 @@ DB_USER=dbuser
 DB_PASS=dbpass
 ```
 
-*[/scripts/config.sh file](/scripts/config.sh)*
+**[/scripts/config.sh](/scripts/config.sh) file**
 
 ```bash
 #! /bin/bash
