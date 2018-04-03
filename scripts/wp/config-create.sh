@@ -6,10 +6,10 @@ source ./scripts/config.sh
 docker-compose exec app \
   wp config create \
   --path="$WP_PATH" \
-  --dbname="$WP_DB_BASE" \
-  --dbuser="$WP_DB_USER" \
-  --dbpass="$WP_DB_PASS" \
-  --dbhost="$WP_DB_HOST" \
+  --dbname="$DB_BASE" \
+  --dbuser="$DB_USER" \
+  --dbpass="$DB_PASS" \
+  --dbhost="$DB_HOST" \
   --dbprefix="$WP_PREFIX" \
   --force \
   --allow-root
