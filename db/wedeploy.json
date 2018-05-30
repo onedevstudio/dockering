@@ -1,9 +1,0 @@
-{
-  "id": "db",
-  "image": "mysql",
-  "volume": "/var/lib/mysql",
-  "env": {
-    "MYSQL_ROOT_PASSWORD": "wordpress"
-  },
-  "zeroDowntime": true
-}
