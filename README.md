@@ -1,10 +1,8 @@
-![Docker WordPress - Just another WordPress site with Docker! 🐘](/www/wp-content/themes/dockering/screenshot.png)
-
-# Docker WordPress
+# Dockering
 
 > Just another WordPress site with Docker! 🐘
 
-![Docker](http://blog.rivendel.com.br/wp-content/uploads/2015/01/docker-image.png)
+![Dockering - Just another WordPress site with Docker! 🐘](/assets/static/screenshot.png)
 
 ## Installation
 
