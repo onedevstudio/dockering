@@ -5,10 +5,6 @@
       "path": "./assets"
     },
     {
-      "name": "Content",
-      "path": "./www/wp-content"
-    },
-    {
       "name": "WordPress",
       "path": "./www"
     },

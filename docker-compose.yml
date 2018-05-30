@@ -10,13 +10,13 @@ services:
     volumes:
       - ${APP_DIR}:/var/www/html
       - ./php.ini-development:/usr/local/etc/php/php.ini
-      - ./logs/apache:/var/log/apache2
+      - ./.runtime/logs/apache:/var/log/apache2
     links:
       - ${DB_HOST}
       - ${MAIL_LINK}
 
   dbhost:
-    image: mysql
+    image: mariadb
     container_name:  ${APP_NAME}-dbhost
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASS}
