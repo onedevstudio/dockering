@@ -1,3 +1,5 @@
+![Docker WordPress - Just another WordPress site with Docker! 🐘](/www/wp-content/themes/dockering/screenshot.png)
+
 # Docker WordPress
 
 > Just another WordPress site with Docker! 🐘
