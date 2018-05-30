@@ -10,7 +10,12 @@
   },
   "homepage": "https://github.com/onedevstudio/dockering#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "eslint .",
+    "clean": "rimraf ./www/wp-content/themes/dockering/assets",
+    "build": "npm run clean && gulp build",
+    "start": "npm run clean && gulp",
+    "dev": "npm run clean && NODE_ENV=development gulp",
+    "test": "echo 'no has test! lol'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,42 @@
     "docker",
     "wordpress",
     "gulp"
-  ]
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-banner": "^0.1.3",
+    "gulp-cache": "^1.0.2",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-eslint": "^4.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-named": "^1.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "jeet": "^7.2.0",
+    "rimraf": "^2.6.2",
+    "run-sequence": "^2.2.1",
+    "rupture": "^0.7.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
