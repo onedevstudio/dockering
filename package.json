@@ -1,7 +1,7 @@
 {
   "name": "dockering",
   "version": "2.0.0",
-  "description": "🐘 Dockering the WordPress application using docker-compose",
+  "description": "Just another WordPress site with Docker! 🐘 ",
   "main": "index.js",
   "author": "Fernando Moreira",
   "license": "MIT",

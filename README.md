@@ -1,6 +1,6 @@
 # Docker WordPress
 
-> 🐘 Dockering the WordPress application using docker-compose
+> Just another WordPress site with Docker! 🐘
 
 ![Docker](http://blog.rivendel.com.br/wp-content/uploads/2015/01/docker-image.png)
 
