@@ -1,7 +1,3 @@
-# Dockering
-
-> Just another WordPress site with Docker! 🐘
-
 ![Dockering - Just another WordPress site with Docker! 🐘](/assets/static/screenshot.png)
 
 ## Installation
