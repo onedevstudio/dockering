@@ -48,3 +48,4 @@ jspm_packages
 
 .runtime
 logs
+www/wp-content/db.php
