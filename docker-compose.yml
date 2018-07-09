@@ -18,6 +18,8 @@ services:
   dbhost:
     image: mariadb
     container_name:  ${APP_NAME}-dbhost
+    ports:
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=${DB_PASS}
       - MYSQL_DATABASE=${DB_BASE}
