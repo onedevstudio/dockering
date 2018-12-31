@@ -8,13 +8,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class() ?>>
-		<main class="hero">
-			<div class="hero__inner">
-				<h1 class="hero__title"><?= $theme->get('Name'); ?> </h1>
-				<p class="hero__lead"><?= $theme->get('Description'); ?></p>
-			</div>
-			<small class="hero__version">version: <?= $theme->get('Version'); ?></small>
-		</main>
+		<div id="site">
+			<welcome title="<?= $theme->get('Name'); ?>" description="<?= $theme->get('Description'); ?>"></welcome>
+		</div>
 		<?php wp_footer(); ?>
 	</body>
 </html>

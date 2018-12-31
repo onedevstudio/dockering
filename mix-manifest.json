@@ -1,0 +1,9 @@
+{
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/bundle.js": "/src/wordpress/wp-content/themes/dockering/assets/scripts/bundle.js",
+    "/src/wordpress/wp-content/themes/dockering/assets/stylesheets/bundle.css": "/src/wordpress/wp-content/themes/dockering/assets/stylesheets/bundle.css",
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/bundle.js.map": "/src/wordpress/wp-content/themes/dockering/assets/scripts/bundle.js.map",
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/manifest.js": "/src/wordpress/wp-content/themes/dockering/assets/scripts/manifest.js",
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/manifest.js.map": "/src/wordpress/wp-content/themes/dockering/assets/scripts/manifest.js.map",
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/vendor.js": "/src/wordpress/wp-content/themes/dockering/assets/scripts/vendor.js",
+    "/src/wordpress/wp-content/themes/dockering/assets/scripts/vendor.js.map": "/src/wordpress/wp-content/themes/dockering/assets/scripts/vendor.js.map"
+}

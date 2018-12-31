@@ -1,4 +1,4 @@
-FROM wordpress:4.9
+FROM wordpress:5
 
 ENV WP_PATH="/var/www/html"
 

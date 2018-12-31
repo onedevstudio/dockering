@@ -1,4 +1,8 @@
-version: "3"
+version: '3'
+
+volumes:
+  wordpress-mysql-data:
+    driver: local
 
 services:
   app:
@@ -16,7 +20,7 @@ services:
       - ${MAIL_LINK}
 
   dbhost:
-    image: mariadb
+    image: ambientum/mysql:5.7
     container_name:  ${APP_NAME}-dbhost
     ports:
       - "3306:3306"
@@ -26,22 +30,7 @@ services:
       - MYSQL_USER=${DB_USER}
       - MYSQL_PASSWORD=${DB_PASS}
     volumes:
-      - ./.runtime/mysql:/var/lib/mysql
-
-  dbadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name:  ${APP_NAME}-dbadmin
-    environment:
-      - PMA_HOST=${DB_HOST}
-      - PMA_USER=${DB_USER}
-      - PMA_PASSWORD=${DB_PASS}
-      - PHP_UPLOAD_MAX_FILESIZE=1G
-      - PHP_MAX_INPUT_VARS=1G
-    restart: always
-    ports:
-     - 8001:80
-    volumes:
-     - /sessions
+      - wordpress-mysql-data:/var/lib/mysql
 
   mail:
     image: mailhog/mailhog
