@@ -1,4 +1,4 @@
-![Dockering - Just another WordPress site with Docker! 🐘](/assets/static/screenshot.png)
+![Dockering - Just another WordPress site with Docker! 🐘](/src/assets/static/screenshot.png)
 
 ## Installation
 
