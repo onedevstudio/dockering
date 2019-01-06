@@ -1,0 +1,18 @@
+{
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 10000,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/wp-admin": true,
+    "**/wp-includes": true,
+    "**/uploads": true,
+    "**/upgrade": true,
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/wp-admin": true,
+    "**/wp-includes": true,
+    "**/uploads": true,
+    "**/upgrade": true,
+  }
+}
